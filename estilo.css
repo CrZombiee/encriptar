@@ -1,0 +1,54 @@
+*{
+    box-sizing: 0;
+}
+header{
+    display: flex;
+    width: 100%;
+}
+.titulo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+main{
+    display: flex;
+    width: 100%;
+}
+
+.contFormulario{
+    width: 100%;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contFormulario form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.casilla{
+    border: 1px solid black;
+    height: 25px;
+    width: 20%;
+    min-width: 140px;
+    text-align: center;
+}
+
+.botonEncriptar{
+    border: 1px dotted black;
+    height: 25px;
+    width: 10%;
+    min-width: 75px;
+}

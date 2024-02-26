@@ -17,22 +17,24 @@
         <div class="contFormulario">
             <h2>texto a encriptar:</h2>
             <form  method="post" id="formulario">
-                <input type="text" class="casilla" name="textoEncriptar" id="datos">
+                <input type="text" class="casilla" name="textoEncriptar" id="textoEncriptar">
                 <button type="submit" class="botonEncriptar">Encriptar</button>
             </form>
         </div>
-        <div id="resultado"></div>
+        <div id="resultado" class="contenedorResultado">
+
+        </div>
     </main>
 
     <script>
         $(document).ready(function() {
             $("#formulario").on("submit", function(e) {
                 e.preventDefault();
-                var datos = $("#datos").val();
+                var datos = $("#textoEncriptar").val();
                 $.ajax({
                     url: "Extension.php",
                     type: "POST",
-                    data: { datos: datos },
+                    data: { textoEncriptar: datos },
                     success: function(data) {
                         $("#resultado").html(data);
                     },
